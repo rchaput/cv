@@ -1,0 +1,60 @@
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+name: deploy
+
+jobs:
+
+  render:
+    if: "!contains(github.event.head_commit.message, 'skip deploy')"
+    name: "Render and deploy CV"
+    # Grant some permissions to allow deployment.
+    permissions:
+      pages: write
+      id-token: write
+    # Specify the deployment environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+
+      # Checkout the source
+      - uses: actions/checkout@v3
+
+      # Setup R, use binary packages for speedup (RStudio Package Manager)
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+      # Install R package dependencies
+      - uses: r-lib/actions/setup-r-dependencies@v2
+      # Install pandoc (used to transform the markdown to HTML)
+      - uses: r-lib/actions/setup-pandoc@v2
+      # Install Chrome headless (used to print HTML to PDF)
+      - uses: browser-actions/setup-chrome@latest
+
+      # Produce the "research" HTML version
+      - run: mkdir -p "docs/research/"
+      - name: Render Research - HTML CV
+        run: rmarkdown::render("cv_research.Rmd", output_file = "docs/research/index.html")
+        shell: Rscript {0}
+      # Convert HTML to PDF
+      - name: Render Research - PDF CV
+        run: pagedown::chrome_print("docs/research/index.html", output = "docs/research/cv.pdf")
+        shell: Rscript {0}
+
+      # Upload the resulting "docs/" folder as an artifact so it can be later
+      # used to deploy to GitHub Pages
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: docs/
+
+      # Deploy the artifact to GitHub Pages
+      - name: Deploy to GitHub pages
+        id: deployment
+        uses: actions/deploy-pages@v1
