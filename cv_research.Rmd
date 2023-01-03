@@ -1,0 +1,278 @@
+---
+title: "CV - Remy Chaput"
+author: Remy Chaput
+date: "`r Sys.Date()`"
+output:
+  pagedown::html_resume:
+    template: 'template.html'
+    css: [ 'dd_cv.css', 'custom.css', 'resume' ]
+    self_contained: true
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  results = "asis",
+  echo = FALSE
+)
+
+library(magrittr)  # For the pipe
+source("contact_functions.R")
+```
+
+```{r metathis}
+library(metathis)
+meta() %>%
+  meta_name("github-repo" = "rchaput/cv") %>%
+  meta_social(
+    title = "Remy Chaput CV",
+    description = "CV made with rmarkdown and pagedown",
+    url = "https://rchaput.github.io/cv/",
+    og_type = "website",
+    og_author = "Remy Chaput"
+  )
+```
+
+# Aside
+
+<center>
+![Remy Chaput](avatar.jpg){width=80% style='border-radius: 50%;'}
+</center>
+
+
+### CONTACT
+
+<center>
+```{r contact}
+cv.contact.home("https://rchaput.github.io")
+cv.contact.github("rchaput")
+cv.contact.email("rchaput.pro@gmail.com")
+cv.contact.orcid("0000-0002-2233-7566")
+cv.contact.researchgate("Remy_Chaput")
+cv.contact.zotero("rchaput")
+cv.contact.dblp("272/7185")
+```
+</center>
+
+<br />
+
+
+### Languages
+
+**French**: Native
+
+**English**: Technical
+
+### Research Interests
+
+**Machine Ethics**
+
+**Human-Centered AI**
+
+**Explainable AI**
+
+**Neural-Symbolic (Hybrid) AI**
+
+**(Lifelong) Reinforcement Learning**
+
+**Multi-Agent Systems**
+
+
+# Main
+
+## Remy Chaput {#title}
+
+### Ph.D. in Computer Science (Artificial Intelligence)
+
+
+## Publications {data-icon=newspaper}
+
+### A Multi-Agent Approach to Combine Reasoning and Learning for an Ethical Behavior
+
+International Conference
+
+AIES'21
+
+2021
+
+Rémy Chaput, Jérémy Duval, Olivier Boissier, Mathieu Guillermin & Salima Hassas (2021). « A Multi-Agent Approach to Combine Reasoning and Learning for an Ethical Behavior ». AIES '21: AAAI/ACM Conference on AI, Ethics, and Society, 21 mai 2021, Virtual Event USA (États-Unis), pp. 13-23. doi : 10.1145/3461702.3462515. HAL : emse-03318195.
+
+
+### Approche multi-agent combinant raisonnement et apprentissage pour un comportement éthique
+
+National Conference
+
+JFSMA'21
+
+2021
+
+Rémy Chaput, Jérémy Duval, Olivier Boissier, Mathieu Guillermin & Salima Hassas (2021). « Approche multi-agent combinant raisonnement et apprentissage pour un comportement éthique ». Journées Francophones sur les Systèmes Multi-Agents, 30 juin 2021, Bordeaux (France). HAL : emse-03278353.
+
+
+### Explanation for Humans, for Machines, for Human-Machine Interactions?
+
+International Workshop
+
+AAAI-2021
+
+2021
+
+Rémy Chaput, Amélie Cordier & Alain Mille (2021). « Explanation for Humans, for Machines, for Human-Machine Interactions? ». AAAI-2021, Explainable Agency in Artificial Intelligence WS, 8 février 2021, Virtual Conference (États-Unis). HAL : hal-03106286.
+
+
+### Apprentissage adaptatif de comportements éthiques
+
+National Conference
+
+JFSMA'20
+
+2020
+
+Rémy Chaput, Olivier Boissier, Mathieu Guillermin & Salima Hassas (2020). « Apprentissage adaptatif de comportements éthiques ». 28e Journées Francophones sur les Systèmes Multi-Agents (JFSMA'2020), 29 juin 2020, Angers (France). HAL : hal-03012127.
+
+
+### Une perspective historique sur l'IA explicable
+
+Technical Report
+
+N/A
+
+2020
+
+Alain Mille, Rémy Chaput & Amélie Cordier (2020). « Une perspective historique sur l'IA explicable Document préparatoire à un tutorial AFIA juillet 2020 ». Rapport de recherche. HAL : hal-03352469.
+
+
+## Teaching {data-icon=chalkboard-teacher}
+
+### Bases de l'Intelligence Artificielle
+
+N/A
+
+Université Claude Bernard Lyon 1
+
+2022 - 2019
+
+* Chargé de TP en 2019 puis TD+TP depuis 2020
+* Niveau Master 1
+* Modélisation de problèmes, Résolution par contrainte
+* 15h TD + 52h TP
+
+
+### Algorithmique et Programmation Orientée Objet
+
+N/A
+
+Université Claude Bernard Lyon 1
+
+2022 - 2019
+
+* Chargé de TD et TP
+* Organisation de projet, rédaction de sujet
+* Niveau Licence 3
+* UML, Programmation Orientée Objet, Programmation Java
+* 42h TD + 76h TP
+
+
+### Intelligence Bio-Inspirée
+
+N/A
+
+Université Claude Bernard Lyon 1
+
+2021
+
+* Encadrement de projet sur des algorithmes génétiques
+* Niveau Master 2
+* Programmation Python
+* 6h de Projet (TP)
+
+
+## Article peer-review {data-icon=book}
+
+### AAMAS
+
+Peer-reviewed 1 article for the [AAMAS'2023](https://aamas2023.soton.ac.uk/) conference as a sub-reviewer
+
+N/A
+
+2022
+
+* Domains: AI, Multi-Agent Systems
+
+
+### Digital Society
+
+Peer-reviewed 1 article for a special edition of [Digital Society](https://www.springer.com/journal/44206)
+
+N/A
+
+2022
+
+* Domains: Machine Ethics, AI and Society
+
+
+### EXTRAAMAS
+
+Peer-reviewed 2 articles for the [EXTRAAMAS](https://extraamas.ehealth.hevs.ch/) workshop
+
+N/A
+
+2022
+
+* Domain: AI and Explainability
+
+
+## Research Projects {data-icon=laptop}
+
+### Ethics.AI
+
+Regional project, funded by Pack Ambition Recherche (Auvergne-Rhône-Alpes)
+
+N/A
+
+2022 - 2019
+
+* Multidisciplinary and multi-university consortium
+* Participation in and organization of meetings
+* Drafting minutes, writing reports
+* (Co-)Supervision of interns: 5x Master 2nd year, 1x Master 1st year
+
+
+## Education {data-icon=graduation-cap data-concise=true}
+
+### Doctorate in Computer Science
+
+Université Claude Bernard Lyon 1, LIRIS
+
+Lyon, France
+
+2022 - 2019
+
+Jury members:
+
+* Parisa Ghodous (*President*)
+* Grégory Bonnet (*Reviewer*)
+* Marija Slavkovik (*Reviewer*)
+* Alain Dutech (*Examiner*)
+* Juan A. Rodríguez-Aguilar (*Examiner*)
+* Salima Hassas (*Supervisor*)
+* Olivier Boissier (*Co-supervisor*)
+* Mathieu Guillermin (*Co-supervisor*)
+
+
+### Master in Computer Science, specialty Artificial Intelligence
+
+Université Claude Bernard Lyon 1
+
+Lyon, France
+
+2019 - 2017
+
+
+### Bachelor in Computer Science
+
+Université Claude Bernard Lyon 1
+
+Lyon, France
+
+2017 - 2014
+

@@ -12,5 +12,7 @@ Depends:
 Imports:
     glue,
     knitr,
+    magrittr,
+    metathis,
     pagedown
 Encoding: UTF-8
