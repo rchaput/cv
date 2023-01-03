@@ -1,0 +1,13 @@
+# R
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.Renviron
+
+# OS, IDEs, ...
+.DS_Store
+.idea/
+
+# Rorcid
+.httr-oauth

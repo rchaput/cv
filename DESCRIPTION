@@ -1,0 +1,15 @@
+Package: rchaputcv
+Title: RChaput Curriculum Vitae
+Version: 0.0.1
+Authors@R:
+  person("Remy", "Chaput", email = "rchaput.pro@gmail.com",
+         role = c("aut", "cre"),
+         comment = c(ORCID = "0000-0002-2233-7566"))
+Description: Source code for the CV Remy Chaput.
+URL: https://github.com/rchaput/cv
+Depends:
+    R (>= 4.1.2)
+Imports:
+    knitr,
+    pagedown
+Encoding: UTF-8
