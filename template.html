@@ -101,6 +101,10 @@
   els = document.getElementById('main').querySelectorAll('.level3');
   for (i = 0; i < els.length; i++) {
     el = els[i];
+    // If the element already contains class `blocks`, it was already processed
+    // (e.g., by the R code directly). We do not need to re-arrange it on the
+    // client side.
+    if (el.className.includes('blocks')) continue;
     if (el.parentNode.id === 'title') continue;
     el.className += ' blocks';
     el.innerHTML = '<div class="date"></div>' + '<div class="decorator"></div>' +
