@@ -11,8 +11,10 @@ Depends:
     R (>= 4.1.2)
 Imports:
     glue,
+    htmltools,
     knitr,
     magrittr,
     metathis,
-    pagedown
+    pagedown,
+    stringr
 Encoding: UTF-8
