@@ -66,8 +66,13 @@ aside {
     padding: 0.5em;
 }
 
-/* First version for "chips" (tags): grey background, no border. */
-.chip {
+/* Add a bit of margin between tags. Long selector to have higher priority. */
+.level3.blocks .details .tags span {
+    margin-right: 8px;
+}
+
+/* 1st version for "chips" (tags): rounded chip, grey background, no border. */
+.chip1 {
     display: inline-block;
     padding: 0 10px;
     height: 1.25em;
@@ -75,7 +80,7 @@ aside {
     background-color: #f1f1f1;
 }
 
-/* Second version for "chips" (tags): no background, grey border. */
+/* 2nd version for "chips" (tags): rounded, no background, grey border. */
 .chip2 {
     display: inline-block;
     padding: 0 10px 15px;
@@ -84,4 +89,12 @@ aside {
     border-color: #b7b7b7;
     border-style: solid;
     border-width: 1px;
+}
+
+/* 3rd version for "chips" (tags): rectangular, grey background, no border. */
+.chip3 {
+    display: inline-block;
+    padding: 0 5px;
+    height: 1.25em;
+    background-color: #f1f1f1;
 }
