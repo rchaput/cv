@@ -131,7 +131,7 @@ detailed_entry <- function (
 
   if (!is.null(when)) {
     # Split by a hyphen `-`, potentially surrounded by spaces ` *`.
-    dates <- unlist(strsplit(when, " *- *"))
+    dates <- unlist(strsplit(as.character(when), " *- *"))
     end_date <- dates[1]
     # Note that `start_date` can be `NA` if there was no hyphen in `when`!
     start_date <- dates[2]
@@ -250,8 +250,14 @@ detailed_entry <- function (
 #' > <ul><li><p>A</p></li><li><ul><li><p>nested</p></li><li><p>list</p></li></ul></li></ul>
 #'
 .parse_content_to_list <- function (content) {
-
-  if (length(content) == 1) {
+  if (typeof(content) == "list" && length(content) == 1) {
+    # Special case, we might have imbricated lists, we want to handle the
+    # single-element in the list as the content itself instead.
+    # For example: `list(c("1st", "2nd"))` => `c("1st", "2nd")`.
+    # This typically happens when using tibbles.
+    result <- .parse_content_to_list(content[[1]])
+  }
+  else if (length(content) == 1) {
     # Single element, simply return a paragraph.
     result <- htmltools::p(
       content
