@@ -67,6 +67,66 @@ detailed_entry <- function (
 }
 
 
+#' Create several HTML entries from a data set.
+#'
+#' This function builds upon `detailed_entry` to produce entries for each
+#' row, e.g., of a tibble.
+#' The parameters have the same role as in `detailed_entry` except that,
+#' instead of being the values themselves, they should be strings that
+#' refer to the data set's column in which the values can be found.
+#' For example, `what = "title"` means that the `what` value should be
+#' obtained by looking at the `title` column (`data[["title"]]`).
+#'
+#' @return The HTML elements that correspond to the entries.
+#'
+#' @seealso detailed_entry
+detailed_entries <- function (
+  data,
+  what = NULL,
+  when = NULL,
+  when_start = NULL,
+  when_end = NULL,
+  with = NULL,
+  where = NULL,
+  why = NULL,
+  tags = NULL,
+  tag_class = "chip1"
+) {
+
+  # Returns either the content of a column in the data, or NULL if no column
+  # was specified (this allows to handle the default `NULL` arguments).
+  get_column_or_default <- function (row, column, default = NULL) {
+    if (is.null(column) || is.na(column)) {
+      default
+    } else {
+      row[[column]]
+    }
+  }
+
+  # `rowwise` will group data by row (each group is a single row)
+  # `group_map` will apply a map operator on each group (= on each row)
+  # `.x` represents the group (= the row)
+  # The result is a list, containing as many elements as there are rows
+  entries <- data %>%
+    dplyr::rowwise() %>%
+    dplyr::group_map(~ detailed_entry(
+      what = get_column_or_default(.x, what),
+      with = get_column_or_default(.x, with),
+      where = get_column_or_default(.x, where),
+      when = get_column_or_default(.x, when),
+      when_start = get_column_or_default(.x, when_start),
+      when_end = get_column_or_default(.x, when_end),
+      why = get_column_or_default(.x, why),
+      tags = get_column_or_default(.x, tags),
+      tag_class = tag_class
+    ))
+
+  htmltools::tagList(
+    entries
+  )
+}
+
+
 #' @keywords internal
 #' Sanitize a title into an HTML-valid ID.
 #'
