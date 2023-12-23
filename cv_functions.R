@@ -53,6 +53,7 @@ read_data <- function (filepath) {
 #' @param why The details (additional information) about the entry. Either a
 #'  single element, which will be represented as a paragraph; or a (potentially
 #'  nested) list, which will be represented as bullet points.
+#' @param url The (optional) URL to link the header to.
 #' @param tags Optional tags about the entry.
 #' @param tag_class The CSS class to use for the tags.
 #'
@@ -65,6 +66,7 @@ detailed_entry <- function (
   when_start = NULL,
   when_end = NULL,
   why = NULL,
+  url = NULL,
   tags = NULL,
   tag_class = "chip1"
 ) {
@@ -83,7 +85,7 @@ detailed_entry <- function (
     htmltools::div(
       class = 'details',
       .create_header(
-        what, with, where
+        what, with, where, url
       ),
       .create_desc(
         why
@@ -121,6 +123,7 @@ detailed_entries <- function (
   with = NULL,
   where = NULL,
   why = NULL,
+  url = NULL,
   tags = NULL,
   tag_class = "chip1"
 ) {
@@ -149,6 +152,7 @@ detailed_entries <- function (
       when_start = get_column_or_default(.x, when_start),
       when_end = get_column_or_default(.x, when_end),
       why = get_column_or_default(.x, why),
+      url = get_column_or_default(.x, url),
       tags = get_column_or_default(.x, tags),
       tag_class = tag_class
     ))
@@ -261,17 +265,25 @@ detailed_entries <- function (
 #'   (`""`) can be used to force creating the element, but is not recommended:
 #'   this will result in a FontAwesome map-marker icon next to nothing, which
 #'   can be confusing.
+#' @param url The optional URL that the header should link to.
 #'
 #' @return The header element, optionnally containing spans for the with and
 #'   where, if they were provided.
 .create_header <- function (
   title,
   with = NULL,
-  where = NULL
+  where = NULL,
+  url = NULL
 ) {
 
   element <- htmltools::tags$header(
-    htmltools::h3(title)
+    htmltools::h3(
+      if(!is.null(url)) {
+        htmltools::tags$a(title, href=url, target="_blank")
+      } else {
+        title
+      }
+    )
   )
 
   if (!is.null(with)) {
