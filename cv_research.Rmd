@@ -15,8 +15,10 @@ knitr::opts_chunk$set(
   echo = FALSE
 )
 
+library(icons) # For icons (fontawesome + simpleicons)
 library(magrittr)  # For the pipe
 source("contact_functions.R")
+source("cv_functions.R")
 ```
 
 ```{r metathis}
@@ -38,18 +40,22 @@ meta() %>%
 ![Remy Chaput](avatar.jpg){width=80% style='border-radius: 50%;'}
 </center>
 
+<br />
+
 
 ### CONTACT
 
 <center>
 ```{r contact}
-cv.contact.home("https://rchaput.github.io")
-cv.contact.github("rchaput")
-cv.contact.email("rchaput.pro@gmail.com")
-cv.contact.orcid("0000-0002-2233-7566")
-cv.contact.researchgate("Remy_Chaput")
-cv.contact.zotero("rchaput")
-cv.contact.dblp("272/7185")
+htmltools::tagList(
+  cv.contact.home("https://rchaput.github.io"),
+  cv.contact.github("rchaput"),
+  cv.contact.email("rchaput.pro@pm.me"),
+  cv.contact.orcid("0000-0002-2233-7566"),
+  cv.contact.researchgate("Remy_Chaput"),
+  cv.contact.zotero("rchaput"),
+  cv.contact.dblp("272/7185")
+)
 ```
 </center>
 
@@ -62,86 +68,56 @@ cv.contact.dblp("272/7185")
 
 **English**: Technical
 
+<br />
+
 ### Research Interests
 
-**Machine Ethics**
+<p> `r fontawesome("book-open", style = "solid")` Machine Ethics </p>
 
-**Human-Centered AI**
+<p> `r fontawesome("book-open", style = "solid")` Human-Centered AI </p>
 
-**Explainable AI**
+<p> `r fontawesome("book-open", style = "solid")` Explainable AI </p>
 
-**Neural-Symbolic (Hybrid) AI**
+<p> `r fontawesome("book-open", style = "solid")` Neural-Symbolic (Hybrid) AI </p>
 
-**(Lifelong) Reinforcement Learning**
+<p> `r fontawesome("book-open", style = "solid")` Reinforcement Learning </p>
 
-**Multi-Agent Systems**
+<p> `r fontawesome("book-open", style = "solid")` Multi-Agent Systems </p>
 
 
 # Main
 
-## Remy Chaput {#title}
+## Dr. Remy Chaput {#title}
 
 ### Ph.D. in Computer Science (Artificial Intelligence)
 
 
 ## Publications {data-icon=newspaper}
 
-### A Multi-Agent Approach to Combine Reasoning and Learning for an Ethical Behavior
-
-International Conference
-
-AIES'21
-
-2021
-
-Rémy Chaput, Jérémy Duval, Olivier Boissier, Mathieu Guillermin & Salima Hassas (2021). « A Multi-Agent Approach to Combine Reasoning and Learning for an Ethical Behavior ». AIES '21: AAAI/ACM Conference on AI, Ethics, and Society, 21 mai 2021, Virtual Event USA (États-Unis), pp. 13-23. doi : 10.1145/3461702.3462515. HAL : emse-03318195.
-
-
-### Approche multi-agent combinant raisonnement et apprentissage pour un comportement éthique
-
-National Conference
-
-JFSMA'21
-
-2021
-
-Rémy Chaput, Jérémy Duval, Olivier Boissier, Mathieu Guillermin & Salima Hassas (2021). « Approche multi-agent combinant raisonnement et apprentissage pour un comportement éthique ». Journées Francophones sur les Systèmes Multi-Agents, 30 juin 2021, Bordeaux (France). HAL : emse-03278353.
-
-
-### Explanation for Humans, for Machines, for Human-Machine Interactions?
-
-International Workshop
-
-AAAI-2021
-
-2021
-
-Rémy Chaput, Amélie Cordier & Alain Mille (2021). « Explanation for Humans, for Machines, for Human-Machine Interactions? ». AAAI-2021, Explainable Agency in Artificial Intelligence WS, 8 février 2021, Virtual Conference (États-Unis). HAL : hal-03106286.
-
-
-### Apprentissage adaptatif de comportements éthiques
-
-National Conference
-
-JFSMA'20
-
-2020
-
-Rémy Chaput, Olivier Boissier, Mathieu Guillermin & Salima Hassas (2020). « Apprentissage adaptatif de comportements éthiques ». 28e Journées Francophones sur les Systèmes Multi-Agents (JFSMA'2020), 29 juin 2020, Angers (France). HAL : hal-03012127.
-
-
-### Une perspective historique sur l'IA explicable
-
-Technical Report
-
-N/A
-
-2020
-
-Alain Mille, Rémy Chaput & Amélie Cordier (2020). « Une perspective historique sur l'IA explicable Document préparatoire à un tutorial AFIA juillet 2020 ». Rapport de recherche. HAL : hal-03352469.
+```{r publications}
+read_data("data/research/publications_en.yml") %>%
+  detailed_entries(
+    what = "title",
+    with = "kind",
+    where = "where",
+    when = "date",
+    why = "ref"
+  )
+```
 
 
 ## Teaching {data-icon=chalkboard-teacher}
+
+### Intelligent Agents
+
+N/A
+
+Université Claude Bernard Lyon 1
+
+2023
+
+* Chargé de TP en 2023
+* Niveau Master 2, parcours Intelligence Artificielle
 
 ### Bases de l'Intelligence Artificielle
 
@@ -163,7 +139,7 @@ N/A
 
 Université Claude Bernard Lyon 1
 
-2022 - 2019
+2023 - 2019
 
 * Chargé de TD et TP
 * Organisation de projet, rédaction de sujet
@@ -188,40 +164,30 @@ Université Claude Bernard Lyon 1
 
 ## Article peer-review {data-icon=book}
 
-### AAMAS
-
-Peer-reviewed 1 article for the [AAMAS'2023](https://aamas2023.soton.ac.uk/) conference as a sub-reviewer
-
-N/A
-
-2022
-
-* Domains: AI, Multi-Agent Systems
-
-
-### Digital Society
-
-Peer-reviewed 1 article for a special edition of [Digital Society](https://www.springer.com/journal/44206)
-
-N/A
-
-2022
-
-* Domains: Machine Ethics, AI and Society
-
-
-### EXTRAAMAS
-
-Peer-reviewed 2 articles for the [EXTRAAMAS](https://extraamas.ehealth.hevs.ch/) workshop
-
-N/A
-
-2022
-
-* Domain: AI and Explainability
+```{r peer-reviews}
+read_data("data/research/peerreview_en.yml") %>%
+  detailed_entries(
+    what = "name",
+    with = "role",
+    when = "date",
+    why = "details"
+  )
+```
 
 
 ## Research Projects {data-icon=laptop}
+
+### ACCELER-AI
+
+Project funded by Agence Nationale de la Recherche (ANR-22-CE23-0028)
+
+N/A
+
+2024 - 2023
+
+* Multidisciplinary and multi-university consortium
+* Communication of the project to national and international seminaries
+* Mentoring interns and Ph.D student
 
 ### Ethics.AI
 
@@ -246,6 +212,9 @@ Université Claude Bernard Lyon 1, LIRIS
 Lyon, France
 
 2022 - 2019
+
+Thesis subject: *Learning behaviours aligned with moral values in a multi-agent
+system: guiding reinforcement learning with symbolic judgments*
 
 Jury members:
 

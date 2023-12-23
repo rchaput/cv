@@ -1,0 +1,106 @@
+- title: "Learning to identify and settle dilemmas through contextual user preferences"
+  kind: "International Conference"
+  where: "ICTAI'23"
+  date: "2023"
+  ref:
+    "Rémy Chaput, Laëtitia Matignon, Mathieu Guillermin. Learning to identify
+    and settle dilemmas through contextual user preferences. IEEE International
+    Conference on Tools with Artificial Intelligence (ICTAI), Nov 2023, Atlanta,
+    United States. DOI : 10.1109/ICTAI59109.2023.00075. HAL : hal-04349804."
+
+- title: "Ethical Smart Grid: a Gym environment for learning ethical behaviours"
+  kind: "Journal Article"
+  where: "JOSS"
+  date: "2023"
+  ref:
+    " Clément Scheirlinck, Rémy Chaput, Salima Hassas. Ethical Smart Grid: a
+    Gym environment for learning ethical behaviours. Journal of Open Source
+    Software, 2023, 8 (88), pp.5410. DOI : 10.21105/joss.05410. HAL : hal-04187666."
+
+- title: "Apprentissage de comportements éthiques multi-valeurs par combinaison
+    d’agents juges symboliques et d’agents apprenants"
+  kind: "Journal Article"
+  where: "ROIA"
+  date: "2023"
+  ref:
+    "Rémy Chaput, Jérémy Duval, Olivier Boissier, Mathieu Guillermin, Salima
+    Hassas. Apprentissage de comportements éthiques multi-valeurs par combinaison
+    d’agents juges symboliques et d’agents apprenants. Revue Ouverte d'Intelligence
+    Artificielle, 2023, 4 (2), pp.41-66. DOI : 10.5802/roia.56. HAL : hal-04161020."
+
+- title: "AJAR: An Argumentation-based Judging Agents Framework for Ethical Reinforcement Learning"
+  kind: "International Conference"
+  where: "AAMAS'23"
+  date: "2023"
+  ref:
+    "Benoît Alcaraz, Olivier Boissier, Rémy Chaput, Christopher Leturc. AJAR:
+    An Argumentation-based Judging Agents Framework for Ethical Reinforcement
+    Learning. AAMAS '23: International Conference on Autonomous Agents and
+    Multiagent Systems, International Foundation for Autonomous Agents and
+    Multiagent Systems, May 2023, London, United Kingdom.
+    DOI : 10.5555/3545946.3598956. HAL : hal-04127943."
+
+- title: "Artificial Moral Advisors: enhancing human ethical decision-making"
+  kind: "International Conference"
+  where: "ETHICS'23"
+  date: "2023"
+  ref:
+    "Marco Tassella, Rémy Chaput, Mathieu Guillermin. Artificial Moral Advisors:
+    enhancing human ethical decision-making. 2023 IEEE International Symposium
+    on Ethics in Engineering, Science, and Technology (ETHICS), IEEE, May 2023,
+    West Lafayette, United States. pp.1-5, DOI : 10.1109/ETHICS57328.2023.10155026.
+    HAL : hal-04127849."
+
+- title: "A Multi-Agent Approach to Combine Reasoning and Learning for an
+    Ethical Behavior"
+  kind: "International Conference"
+  where: "AIES'21"
+  date: "2021"
+  ref:
+    "Rémy Chaput, Jérémy Duval, Olivier Boissier, Mathieu Guillermin & 
+    Salima Hassas (2021). « A Multi-Agent Approach to Combine Reasoning and
+    Learning for an Ethical Behavior ». AIES '21: AAAI/ACM Conference on AI,
+    Ethics, and Society, 21 mai 2021, Virtual Event USA (États-Unis), pp. 13-23.
+    doi : 10.1145/3461702.3462515. HAL : emse-03318195."
+
+- title: "Approche multi-agent combinant raisonnement et apprentissage pour un
+    comportement éthique"
+  kind: "National Conference"
+  where: "JFSMA'21"
+  date: "2021"
+  ref:
+    "Rémy Chaput, Jérémy Duval, Olivier Boissier, Mathieu Guillermin & Salima
+    Hassas (2021). « Approche multi-agent combinant raisonnement et apprentissage
+    pour un comportement éthique ». Journées Francophones sur les Systèmes
+    Multi-Agents, 30 juin 2021, Bordeaux (France). HAL : emse-03278353."
+
+- title: "Explanation for Humans, for Machines, for Human-Machine Interactions?"
+  kind: "Workshop"
+  where: "Explainable Agency in AI, AAAI'21"
+  date: "2021"
+  ref:
+    "Rémy Chaput, Amélie Cordier, Alain Mille. Explanation for Humans, for
+    Machines, for Human-Machine Interactions?. AAAI-2021, Explainable Agency in
+    Artificial Intelligence WS, AAAI, Feb 2021, Virtual Conference, United States.
+    HAL : hal-03106286."
+
+- title: "Une perspective historique sur l'IA explicable"
+  kind: "Technical Report"
+  where: ""
+  date: "2020"
+  ref:
+    "Alain Mille, Rémy Chaput, Amélie Cordier. Une perspective historique sur
+    l'IA explicable Document préparatoire à un tutorial AFIA juillet 2020.
+    [Rapport de recherche] LIRIS UMR 5205 CNRS/INSA de Lyon/Université Claude
+    Bernard Lyon 1/Université Lumière Lyon 2/École Centrale de Lyon. 2020.
+    HAL : hal-03352469"
+
+- title: "Apprentissage adaptatif de comportements éthiques"
+  kind: "National Conference"
+  where: "JFSMA'20"
+  date: "2020"
+  ref:
+    "Rémy Chaput, Olivier Boissier, Mathieu Guillermin, Salima Hassas. 
+    Apprentissage adaptatif de comportements éthiques. 28e Journées Francophones
+    sur les Systèmes Multi-Agents (JFSMA'2020), Jun 2020, Angers, France.
+    HAL : hal-03012127."
