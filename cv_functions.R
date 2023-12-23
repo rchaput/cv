@@ -1,3 +1,35 @@
+#' Read a YAML data as a tibble
+#'
+#' It is important that each element in the YAML have the same keys.
+#' For example:
+#' ```
+#' - title: "My element"
+#'   date: "2023"
+#'   details: "Some details about (...)"
+#' - title: "My second element"
+#'   date: "2021"
+#'   details: "Other details about (...)"
+#' ```
+#' This will result in a 2x3 tibble, with 2 rows, and 3 columns (title, date,
+#' and details).
+#'
+#' @param filepath The path to the YAML file.
+#'
+#' @return A tibble in which each row is an element of the YAML, and the
+#'  columns are the keys of the elements.
+read_data <- function (filepath) {
+  yaml_data <- yaml::read_yaml(filepath)
+  # `yaml_data` is a list of lists. The nested lists have names,
+  # but the outer list does not.
+  # We first want to convert each of the nested lists to a tibble.
+  tibbles_list <- lapply(yaml_data, tibble::as_tibble)
+  # Now, we have a list of tibbles; each tibble containing a single row.
+  # We want to combine them into a single tibble.
+  df <- do.call(rbind, tibbles_list)
+  df
+}
+
+
 #' Create a new (HTML) entry.
 #'
 #' This function allows controlling many details about the entry (see the
