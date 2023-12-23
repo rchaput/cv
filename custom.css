@@ -58,10 +58,6 @@ p::title {
     text-align: justify;
 }
 
-aside {
-    padding: 0in;
-}
-
 .aside i::before {
     padding: 0.5em;
 }
