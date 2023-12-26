@@ -54,6 +54,14 @@ read_data <- function (filepath) {
 #'  single element, which will be represented as a paragraph; or a (potentially
 #'  nested) list, which will be represented as bullet points.
 #' @param url The (optional) URL to link the header to.
+#' @param compact Set to `TRUE` to produce a shorter entry, by removing empty
+#'  sections, such as details (`why`) and tags. By default, sections are always
+#'  created, even if they are empty: this takes place in the resulting HTML,
+#'  especially because of CSS rules. If only the `what` is specified, and
+#'  `compact` is set to `TRUE`, this creates a one-line entry. If `with`,
+#'  `where` are specified, they appear below the title (`what`), as expected.
+#'  The `when` still appear as expected, but to ensure a compact format, only
+#'  a single year should be provided (not a time span).
 #' @param tags Optional tags about the entry.
 #' @param tag_class The CSS class to use for the tags.
 #'
@@ -67,6 +75,7 @@ detailed_entry <- function (
   when_end = NULL,
   why = NULL,
   url = NULL,
+  compact = FALSE,
   tags = NULL,
   tag_class = "chip1"
 ) {
@@ -87,13 +96,21 @@ detailed_entry <- function (
       .create_header(
         what, with, where, url
       ),
-      .create_desc(
-        why
-      ),
-      .create_tags(
-        tags,
-        tag_class
-      ),
+      if (!(compact && is.null(why))) {
+        .create_desc(
+          why
+        )
+      } else {
+        NULL
+      },
+      if (!(compact && is.null(tags))) {
+        .create_tags(
+          tags,
+          tag_class
+        )
+      } else {
+        NULL
+      },
     )
   )
 
@@ -124,6 +141,7 @@ detailed_entries <- function (
   where = NULL,
   why = NULL,
   url = NULL,
+  compact = FALSE,
   tags = NULL,
   tag_class = "chip1"
 ) {
@@ -153,6 +171,7 @@ detailed_entries <- function (
       when_end = get_column_or_default(.x, when_end),
       why = get_column_or_default(.x, why),
       url = get_column_or_default(.x, url),
+      compact = compact,
       tags = get_column_or_default(.x, tags),
       tag_class = tag_class
     ))
