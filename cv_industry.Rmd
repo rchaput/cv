@@ -71,27 +71,30 @@ htmltools::tagList(
 
 ### Skills
 
-Programming languages
+#### Programming languages
 
-Java / Kotlin
+<p> `r simple_icons("python")` Python </p>
 
-Python
+<p> `r fontawesome("java", style = "brands")` Java / `r simple_icons("kotlin")` Kotlin </p>
 
-Bash / zsh
+<p> `r simple_icons("gnubash")` Bash / `r simple_icons("zsh")` zsh </p>
 
-R
+<p> `r simple_icons("r")` R </p>
 
-JavaScript / TypeScript
+<p> `r simple_icons("javascript")` JavaScript / `r simple_icons("typescript")` TypeScript </p>
 
-SQL / PostgreSQL / MongoDB
+<p> `r simple_icons("vuedotjs")` Vue / `r simple_icons("vuetify")` Vuetify / `r simple_icons("react")` React </p>
 
-Tools
+#### Tools
 
-Git / GitHub / GitLab
+<p> `r fontawesome("code-branch", style = "solid")` Git / `r simple_icons("github")` GitHub / `r simple_icons("gitlab")` GitLab </p>
 
-IntelliJ IDEA / PyCharm
+<p> `r simple_icons("intellijidea")` IntelliJ IDEA / `r simple_icons("pycharm")` PyCharm </p>
 
-MacOS /  Debian / ArchLinux
+<p> `r simple_icons("apple")` MacOS / `r simple_icons("debian")` Debian / `r simple_icons("archlinux")` Arch </p>
+
+<p> `r simple_icons("postgresql")` PostgreSQL / `r simple_icons("mongodb")` MongoDB </p>
+
 
 # Main
 
