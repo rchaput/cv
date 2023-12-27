@@ -1,8 +1,14 @@
 # Helper methods to print contact information.
 
-cv.contact <- function (icon, url, label = "", alt = "") {
-    template <- "<a href='{url}' alt='{alt}' title='{alt}' target=_blank><i class='{icon}'></i>{label}</a>"
-    print(glue::glue(template))
+cv.contact <- function(icon, url, label = "", alt = "") {
+    return(htmltools::tags$a(
+        htmltools::tags$i(class=icon),
+        label,
+        href=url,
+        alt=alt,
+        title=alt,
+        target="_blank",
+    ))
 }
 
 cv.contact.home <- function (url, label = "") {
