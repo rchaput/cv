@@ -277,7 +277,7 @@ detailed_entries <- function (
   }
 
   if (is.null(end_date) || is.na(end_date)) {
-    warning("At least `when` or `end_date` should be specified!")
+    end_date <- ""
   }
 
   element <- htmltools::div(
