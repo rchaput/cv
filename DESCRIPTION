@@ -15,5 +15,6 @@ Imports:
     magrittr,
     metathis,
     pagedown,
-    stringr
+    stringr,
+    tidyr
 Encoding: UTF-8

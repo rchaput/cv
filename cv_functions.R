@@ -14,18 +14,32 @@
 #' and details).
 #'
 #' @param filepath The path to the YAML file.
+#' @param tags_column (Optional) The name of the tags column, which will be
+#'  nested: it will be a list of elements. If an element in the YAML is a list,
+#'  the resulting Tibble would, by default, duplicate rows to have each list
+#'  element in a separate row. This is not what we want for tags, which should
+#'  be a column whose values are lists.
 #'
 #' @return A tibble in which each row is an element of the YAML, and the
 #'  columns are the keys of the elements.
-read_data <- function (filepath) {
+read_data <- function (filepath, tags_column = NULL) {
   yaml_data <- yaml::read_yaml(filepath)
   # `yaml_data` is a list of lists. The nested lists have names,
   # but the outer list does not.
   # We first want to convert each of the nested lists to a tibble.
   tibbles_list <- lapply(yaml_data, tibble::as_tibble)
-  # Now, we have a list of tibbles; each tibble containing a single row.
-  # We want to combine them into a single tibble.
-  df <- do.call(rbind, tibbles_list)
+  # We have a list of tibbles; they may contain several rows if one of the
+  # columns was a list.
+  # We first merge them together with `bind_rows` (equivalent to
+  # `do.call(rbind, tibbles_list)` but faster).
+  df <- dplyr::bind_rows(tibbles_list)
+  # Then, if we must group values from one of the column, we use `nest` to
+  # group values back into a list (for this specific column), grouping by
+  # all other columns. This results in a tibble of N lines, for N elements in
+  # the original YAML file.
+  if (!is.null(tags_column)) {
+    df <- df %>% tidyr::nest(tags = dplyr::all_of(tags_column))
+  }
   df
 }
 
@@ -155,6 +169,16 @@ detailed_entries <- function (
       row[[column]]
     }
   }
+  # Special handling for tags because it might be a tibble internally...
+  get_tags <- function (row, column) {
+    tags <- get_column_or_default(row, column, NULL)
+    if (!is.null(tags) && typeof(tags) == "list") {
+      # Return the first element of this list, which must be a tibble
+      tags[[1]]
+    } else {
+      tags
+    }
+  }
 
   # `rowwise` will group data by row (each group is a single row)
   # `group_map` will apply a map operator on each group (= on each row)
@@ -172,7 +196,7 @@ detailed_entries <- function (
       why = get_column_or_default(.x, why),
       url = get_column_or_default(.x, url),
       compact = compact,
-      tags = get_column_or_default(.x, tags),
+      tags = get_tags(.x, tags),
       tag_class = tag_class
     ))
 
@@ -426,7 +450,15 @@ detailed_entries <- function (
   }
 
   # Transform the list of tag names into a list of HTML tags.
-  tags <- lapply(tags, create_tag)
+  if (is(tags, "tbl_df")) {
+    # If it is a tibble, we must iterate over rows
+    tags <- tags %>%
+      dplyr::rowwise() %>%
+      dplyr::group_map(~ create_tag(.x))
+  } else {
+    # If it is a list, we can simply use `lapply`
+    tags <- lapply(tags, create_tag)
+  }
 
   htmltools::div(
     class = 'tags',
