@@ -37,7 +37,7 @@ meta() %>%
 # Aside
 
 <center>
-![Remy Chaput](avatar.jpg){width=80% style='border-radius: 50%;'}
+![Remy Chaput](assets/avatar2_gray.jpg){width=80% style='border-radius: 50%;'}
 </center>
 
 <br />
