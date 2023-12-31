@@ -5,6 +5,9 @@
 .Ruserdata
 .Renviron
 
+# R Markdown outputs
+results/
+
 # OS, IDEs, ...
 .DS_Store
 .idea/
