@@ -40,15 +40,8 @@ jobs:
       - run: icons::download_fontawesome(); icons::download_simple_icons()
         shell: Rscript {0}
 
-      # Produce the "research" HTML version
-      - run: mkdir -p "docs/research/"
-      - name: Render Research - HTML CV
-        run: rmarkdown::render("cv_research.Rmd", output_file = "docs/research/index.html")
-        shell: Rscript {0}
-      # Convert HTML to PDF
-      - name: Render Research - PDF CV
-        run: pagedown::chrome_print("docs/research/index.html", output = "docs/research/cv.pdf")
-        shell: Rscript {0}
+      # Produce both "research" and "industry" CVs, in HTML and PDF versions
+      - run: make OUT_DIR=docs all
 
       # Upload the resulting "docs/" folder as an artifact so it can be later
       # used to deploy to GitHub Pages
