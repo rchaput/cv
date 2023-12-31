@@ -8,7 +8,7 @@
   company: LIRIS
   place: Lyon, France
   date: "2023"
-  details: ""
+  details: "Developed an open-source simulator of Smart Grid"
 
 - title: Ph.D. Student
   company: LIRIS
@@ -16,11 +16,11 @@
   date: "2022 - 2019"
   details: ""
 
-- title: Research internship
-  company: LIRIS
-  place: Lyon, France
-  date: "2019"
-  details: ""
+#- title: Research internship
+#  company: LIRIS
+#  place: Lyon, France
+#  date: "2019"
+#  details: ""
 
 - title: Internship
   company: PlaySQL

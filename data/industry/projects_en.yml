@@ -1,17 +1,23 @@
+- title: ethical-smart-grid
+  url: https://rchaput.github.io/project/ethical-smartgrid/
+  desc: "Python simulator of a Smart Grid for ethical behaviours"
+  details: ""
+  tags: ["Python", "Reinforcement Learning", "Simulator", "Smart Grid", "Machine Ethics"]
+
 - title: acronyms
   url: https://github.com/rchaput/acronyms/
   desc: "Quarto extension to use acronyms in computational documents"
   details: ""
-  tags: ["Lua", "Quarto", "Open-Source"]
+  tags: ["Lua", "Quarto", "Computational Documents"]
 
 - title: knitrdrawio
   url: https://github.com/rchaput/knitrdrawio/
   desc: "R package to automatize diagrams in computational documents"
   details: ""
-  tags: ["R", "R Markdown", "Open-Source"]
+  tags: ["R", "R Markdown", "Knitr", "Drawio", "Reproducibility"]
 
 - title: xdg-prefs
   url: https://github.com/rchaput/xdg-prefs/
   desc: "Python Qt app to select the default app for each file format"
   details: ""
-  tags: ["Python", "Qt", "Linux", "XDG", "Open-Source"]
+  tags: ["Python", "Qt", "Linux", "XDG"]

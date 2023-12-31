@@ -81,6 +81,8 @@ htmltools::tagList(
 
 <p> `r simple_icons("r")` R </p>
 
+<p> ![](assets/prolog.svg){width="12" height="12" viewBox="0 0 32 32"} Prolog </p>
+
 <p> `r simple_icons("javascript")` JavaScript / `r simple_icons("typescript")` TypeScript </p>
 
 <p> `r simple_icons("vuedotjs")` Vue / `r simple_icons("vuetify")` Vuetify / `r simple_icons("react")` React </p>
@@ -102,21 +104,110 @@ htmltools::tagList(
 
 ### Ph.D. in Computer Science (Artificial Intelligence)
 
+I am an expert in Artificial Intelligence, focusing on ethical issues (AI for
+good, AI for people, Explainable AI, ...). My favorite languages are Python
+and Java, with the Object-Oriented Programming and Functional Programming
+paradigms, but I also have knowledge in several other languages, such as
+R, Prolog, JS.
+
 
 ## Professional Experience {data-icon=suitcase}
 
-```{r experiences}
-read_data("data/industry/experiences_en.yml") %>%
-  detailed_entries(
-    what = "title",
-    with = "company",
-    where = "place",
-    when = "date",
-    why = "details"
-  )
-```
+### Post-doctorate researcher
+
+[LIRIS](https://liris.cnrs.fr/en)
+
+Lyon, France
+
+2024 - 2023
+
+Member of the ACCELER-AI ANR project. Responsibilities include:
+
+* Reviewing state of the art in Multi-Agent and Multi-Objective Reinforcement Learning.
+* Publishing scientific articles; communicating in conferences.
+* Designing and running experiments.
+* Mentoring a Ph.D. student.
+* Teaching at Licence and Master level.
+
+`r .create_tags(c("Python3", "Reinforcement Learning", "Ethical Artificial Intelligence", "Multi-Agent System"))`
+
+
+### Research engineer
+
+[LIRIS](https://liris.cnrs.fr/en)
+
+Lyon, France
+
+2023
+
+Research engineer in the Ethics.AI project. Responsibilities include:
+
+* Implementation of an [open-source simulator of ethical Smart Grid](https://github.com/ethicsai/ethical-smart-grid).
+* Publishing scientific articles; participating to seminaries.
+* Reporting on the project’s results; developing a website.
+
+`r .create_tags(c("Python3", "Reinforcement Learning", "Ethical Artificial Intelligence", "Multi-Agent System"))`
+
+
+### Ph.D. student
+
+[LIRIS](https://liris.cnrs.fr/en)
+
+Lyon, France
+
+2022 - 2019
+
+Ph.D. student in the Ethics.AI project. The thesis subject was: *Learning
+behaviours aligned with moral values in a multi-agent system: guiding
+reinforcement learning with symbolic judgments*. Responsibilities include:
+
+* Organizing project meetings; preparing the agenda, taking the minutes.
+* Reviewing the state of the art on Machine Ethics; positioning our approach.
+* Developing the use-case and implementation of our approach.
+* Publishing scientific articles; communicating in conferences and seminaries.
+* Mentoring 5x research interns (Master 2) and 1x engineer project (Master 1).
+* Teaching courses at the University, at Licence and Master level.
+
+`r .create_tags(c("Python3", "Reinforcement Learning", "Ethical Artificial Intelligence", "Multi-Agent System","Neural-Symbolic Learning", "Explainable AI"))`
+
+
+### Research internship
+
+[LIRIS](https://liris.cnrs.fr/)
+
+Lyon, France
+
+2019
+
+Research internship in a lab. Responsibilities include:
+
+* Reviewing state of the art; proposing solutions.
+* Implementing proof-of-concepts learning algorithms.
+
+`r .create_tags(c("Python3", "Reinforcement Learning", "Ethical Artificial Intelligence", "Multi-Agent System"))`
+
+
+### Internship
+
+PlaySQL ([Requirement Yogi](https://www.requirementyogi.com/))
+
+Lyon, France
+
+2017
+
+Worked as a full-stack developer in a startup, applying Agile methodology
+within a small team. Responsibilities include:
+
+* Extending existing functionalities on plugins for Atlassian Confluence.
+* Interacting with users and fixing bugs.
+* Adding new functionalities, from conception to implementation.
+
+`r .create_tags(c("Java", "jQuery", "Agile", "Atlassian Confluence", "JIRA"))`
+
 
 ## Projects {data-icon=laptop}
+
+See all my projects on [GitHub](https://github.com/rchaput/) or my [website](https://rchaput.github.io/projects/).
 
 ```{r projects}
 read_data("data/industry/projects_en.yml", "tags") %>%
@@ -153,8 +244,8 @@ read_data("data/industry/education_en.yml") %>%
     what = "title",
     with = "university",
     where = "place",
-    why = "details",
     when_start = "start_date",
-    when_end = "end_date"
+    when_end = "end_date",
+    compact = TRUE
   )
 ```
