@@ -1,0 +1,157 @@
+---
+title: "CV - Remy Chaput"
+author: Remy Chaput
+date: "`r Sys.Date()`"
+output:
+  pagedown::html_resume:
+    template: 'template.html'
+    css: [ 'dd_cv.css', 'custom.css', 'resume' ]
+    self_contained: true
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  results = "asis",
+  echo = FALSE
+)
+
+library(icons) # For icons (fontawesome + simpleicons)
+library(dplyr)  # For manipulating tibbles
+library(magrittr)  # For the pipe
+source("contact_functions.R")
+source("cv_functions.R")
+```
+
+```{r metathis}
+library(metathis)
+meta() %>%
+  meta_name("github-repo" = "rchaput/cv") %>%
+  meta_social(
+    title = "Remy Chaput CV",
+    description = "CV made with rmarkdown and pagedown",
+    url = "https://rchaput.github.io/cv/",
+    og_type = "website",
+    og_author = "Remy Chaput"
+  )
+```
+
+# Aside
+
+<center>
+![Remy Chaput](avatar2_gray.jpg){width=80% style='border-radius: 50%;'}
+</center>
+
+<br />
+
+
+### CONTACT
+
+```{r contact}
+htmltools::tagList(
+  cv.contact.home("https://rchaput.github.io", "rchaput.github.io"),
+  htmltools::br(),
+  cv.contact.github("rchaput", TRUE),
+  htmltools::br(),
+  cv.contact.linkedin("rchaput", TRUE),
+  htmltools::br(),
+  cv.contact.email("rchaput.pro@pm.me", TRUE)
+)
+```
+
+<br />
+
+
+### Languages
+
+**French**: Native
+
+**English**: Proficient
+
+<br />
+
+### Skills
+
+Programming languages
+
+Java / Kotlin
+
+Python
+
+Bash / zsh
+
+R
+
+JavaScript / TypeScript
+
+SQL / PostgreSQL / MongoDB
+
+Tools
+
+Git / GitHub / GitLab
+
+IntelliJ IDEA / PyCharm
+
+MacOS /  Debian / ArchLinux
+
+# Main
+
+## Dr. Remy Chaput {#title}
+
+### Ph.D. in Computer Science (Artificial Intelligence)
+
+
+## Professional Experience {data-icon=suitcase}
+
+```{r experiences}
+read_data("data/industry/experiences_en.yml") %>%
+  detailed_entries(
+    what = "title",
+    with = "company",
+    where = "place",
+    when = "date",
+    why = "details"
+  )
+```
+
+## Projects {data-icon=laptop}
+
+```{r projects}
+read_data("data/industry/projects_en.yml", "tags") %>%
+  detailed_entries(
+    what = "title",
+    with = "desc",
+    url = "url",
+    tags = "tags",
+    tag_class = "chip1",
+    compact = TRUE
+  )
+```
+
+<!--
+## Competitions {data-icon=trophy}
+
+```{r competitions}
+read_data("data/industry/competitions_en.yml") %>%
+  arrange(desc(year)) %>%
+  detailed_entries(
+    what = "title",
+    when = "year",
+    compact = TRUE
+  )
+```
+-->
+
+## Education {data-icon=graduation-cap}
+
+```{r education}
+read_data("data/industry/education_en.yml") %>%
+  dplyr::arrange(dplyr::desc(end_date)) %>%
+  detailed_entries(
+    what = "title",
+    with = "university",
+    where = "place",
+    why = "details",
+    when_start = "start_date",
+    when_end = "end_date"
+  )
+```

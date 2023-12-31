@@ -1,0 +1,17 @@
+- title: acronyms
+  url: https://github.com/rchaput/acronyms/
+  desc: "Quarto extension to use acronyms in computational documents"
+  details: ""
+  tags: ["Lua", "Quarto", "Open-Source"]
+
+- title: knitrdrawio
+  url: https://github.com/rchaput/knitrdrawio/
+  desc: "R package to automatize diagrams in computational documents"
+  details: ""
+  tags: ["R", "R Markdown", "Open-Source"]
+
+- title: xdg-prefs
+  url: https://github.com/rchaput/xdg-prefs/
+  desc: "Python Qt app to select the default app for each file format"
+  details: ""
+  tags: ["Python", "Qt", "Linux", "XDG", "Open-Source"]
