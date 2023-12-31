@@ -11,10 +11,14 @@ Depends:
     R (>= 4.1.2)
 Imports:
     htmltools,
+    icons,
     knitr,
     magrittr,
     metathis,
     pagedown,
+    remotes,
     stringr,
     tidyr
+Remotes:
+    github::mitchelloharawild/icons
 Encoding: UTF-8

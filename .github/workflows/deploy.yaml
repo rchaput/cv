@@ -36,6 +36,9 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v2
       # Install Chrome headless (used to print HTML to PDF)
       - uses: browser-actions/setup-chrome@latest
+      # Install icons
+      - run: icons::download_fontawesome(); icons::download_simple_icons()
+        shell: Rscript {0}
 
       # Produce the "research" HTML version
       - run: mkdir -p "docs/research/"
