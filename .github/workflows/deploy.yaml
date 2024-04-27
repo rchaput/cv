@@ -35,13 +35,20 @@ jobs:
       # Install pandoc (used to transform the markdown to HTML)
       - uses: r-lib/actions/setup-pandoc@v2
       # Install Chrome headless (used to print HTML to PDF)
-      - uses: browser-actions/setup-chrome@latest
+      - uses: browser-actions/setup-chrome@v1
+        id: setup-chrome
+      - run: pagedown::find_chrome()
+        shell: Rscript {0}
+        env:
+          PAGEDOWN_CHROME: ${{ steps.setup-chrome.outputs.chrome-path }}
       # Install icons
       - run: icons::download_fontawesome(); icons::download_simple_icons()
         shell: Rscript {0}
 
       # Produce both "research" and "industry" CVs, in HTML and PDF versions
       - run: make OUT_DIR=docs all
+        env:
+          PAGEDOWN_CHROME: ${{ steps.setup-chrome.outputs.chrome-path }}
 
       # Upload the resulting "docs/" folder as an artifact so it can be later
       # used to deploy to GitHub Pages
