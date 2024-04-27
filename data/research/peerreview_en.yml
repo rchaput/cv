@@ -1,3 +1,9 @@
+- name: "IROS'24"
+  role: "Peer-reviewed 1 article for the IROS'2024 conference"
+  url: "https://iros2024-abudhabi.org/"
+  date: "2024"
+  details: "Domains: Reinforcement Learning, Robotics, Multi-Agent Systems"
+
 - name: "AAMAS'23"
   role: "Peer-reviewed 1 article for the AAMAS'2023 conference as a sub-reviewer"
   url: "https://aamas2023.soton.ac.uk/"

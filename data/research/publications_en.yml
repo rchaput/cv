@@ -8,6 +8,15 @@
     Conference on Tools with Artificial Intelligence (ICTAI), Nov 2023, Atlanta,
     United States. DOI : 10.1109/ICTAI59109.2023.00075. HAL : hal-04349804."
 
+- title: "Adaptive reinforcement learning of multi-agent ethically-aligned behaviours: the QSOM and QDSOM algorithms"
+  kind: "Technical Report"
+  where: "ArXiv"
+  date: "2024"
+  ref:
+    "Rémy Chaput, Olivier Boissier, Mathieu Guillermin. Adaptive reinforcement
+    learning of multi-agent ethically-aligned behaviours: the QSOM and QDSOM 
+    algorithms. 2023. HAL : hal-04379426"
+
 - title: "Ethical Smart Grid: a Gym environment for learning ethical behaviours"
   kind: "Journal Article"
   where: "JOSS"

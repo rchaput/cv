@@ -80,7 +80,7 @@ htmltools::tagList(
 
 <p> `r fontawesome("book-open", style = "solid")` Neural-Symbolic (Hybrid) AI </p>
 
-<p> `r fontawesome("book-open", style = "solid")` Reinforcement Learning </p>
+<p> `r fontawesome("book-open", style = "solid")` Reinforcement Learning (Multi-Agent, Multi-Objective) </p>
 
 <p> `r fontawesome("book-open", style = "solid")` Multi-Agent Systems </p>
 
@@ -108,58 +108,71 @@ read_data("data/research/publications_en.yml") %>%
 
 ## Teaching {data-icon=chalkboard-teacher}
 
+### Ethics of engineer
+
+N/A
+
+Mines Saint-Étienne
+
+2024
+
+* Visiting Lecturer (*CM*, 3h)
+* A 3-hour course I gave to engineers about the ethics of AI
+* Level 1st year of engineering cycle
+* Introduction to AI, societal impact of AI, discussion about ethical issues
+
+
 ### Intelligent Agents
 
 N/A
 
-Université Claude Bernard Lyon 1
+University Claude Bernard Lyon 1
 
 2023
 
-* Chargé de TP en 2023
-* Niveau Master 2, parcours Intelligence Artificielle
+* Teaching Assistant (practical works - *TP*, 9h) in 2023
+* Level Master 2, specialty Artificial Intelligence
 
-### Bases de l'Intelligence Artificielle
+
+### Bases of Artificial Intelligence
 
 N/A
 
-Université Claude Bernard Lyon 1
+University Claude Bernard Lyon 1
 
 2022 - 2019
 
-* Chargé de TP en 2019 puis TD+TP depuis 2020
-* Niveau Master 1
-* Modélisation de problèmes, Résolution par contrainte
-* 15h TD + 52h TP
+* Teaching Assistant (practical works - *TP* since 2019, 52h; tutorials - *TD* since 2020, 15h)
+* Level Master 1
+* Problem modelling; Constraint solving
 
 
-### Algorithmique et Programmation Orientée Objet
+### Algorithmic and Object-Oriented Programming
 
 N/A
 
-Université Claude Bernard Lyon 1
+University Claude Bernard Lyon 1
 
 2023 - 2019
 
-* Chargé de TD et TP
-* Organisation de projet, rédaction de sujet
-* Niveau Licence 3
-* UML, Programmation Orientée Objet, Programmation Java
-* 42h TD + 76h TP
+* Teaching Assistant (practical works - *TP*, 76h ; tutorials - *TD*, 42h)
+* Organized projects, wrote examination papers
+* Level Bachelor 3
+* UML, Object-Oriented Programming, Java language
 
 
-### Intelligence Bio-Inspirée
+### Bio-inspired Intelligence
 
 N/A
 
-Université Claude Bernard Lyon 1
+University Claude Bernard Lyon 1
 
 2021
 
-* Encadrement de projet sur des algorithmes génétiques
-* Niveau Master 2
-* Programmation Python
-* 6h de Projet (TP)
+* Teaching Assistant (practical works and projects - *TP*, 6h)
+* Supervised projects on genetic algorithms
+* Level Master 2
+* Python language
 
 
 ## Article peer-review {data-icon=book}
