@@ -1,4 +1,4 @@
-SRC=contact_functions.R custom.css cv_functions.R dd_cv.css DESCRIPTION template.html
+SRC=contact_functions.R custom.css cv_functions.R dd_cv.css DESCRIPTION template.html data/**
 OUT_DIR=results
 
 all: ${OUT_DIR}/research/cv.html ${OUT_DIR}/research/cv.pdf ${OUT_DIR}/industry/cv.html ${OUT_DIR}/industry/cv.pdf
