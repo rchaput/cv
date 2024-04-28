@@ -198,9 +198,9 @@ N/A
 
 2024 - 2023
 
-* Multidisciplinary and multi-university consortium
-* Communication of the project to national and international seminaries
-* Mentoring interns and Ph.D student
+* Multidisciplinary and multi-university consortium.
+* Communication of the project to national and international seminaries.
+* Mentoring 1x Master intern and 1x Ph.D student.
 
 ### Ethics.AI
 
@@ -210,11 +210,101 @@ N/A
 
 2022 - 2019
 
-* Multidisciplinary and multi-university consortium
-* Participation in and organization of meetings
-* Drafting minutes, writing reports
-* (Co-)Supervision of interns: 5x Master 2nd year, 1x Master 1st year
+* Multidisciplinary and multi-university consortium.
+* Participation in and organization of meetings.
+* Drafting minutes, writing reports.
+* (Co-)Supervision of interns: 5x Master 2nd year, 1x Master 1st year.
 
+
+## Professional Experience {data-icon=suitcase}
+
+### Post-doctorate researcher
+
+[LIRIS](https://liris.cnrs.fr/en)
+
+Lyon, France
+
+2024 - 2023
+
+Member of the [ACCELER-AI](https://projet.liris.cnrs.fr/acceler-ai/) ANR project. Responsibilities include:
+
+* Reviewing state of the art in Multi-Agent and Multi-Objective Reinforcement Learning.
+* Publishing scientific articles; communicating in conferences.
+* Designing and running experiments.
+* Mentoring a Ph.D. student.
+* Teaching at Bachelor and Master level.
+
+`r .create_tags(c("Python3", "Reinforcement Learning", "Ethical Artificial Intelligence", "Multi-Agent System"))`
+
+
+### Research engineer
+
+[LIRIS](https://liris.cnrs.fr/en)
+
+Lyon, France
+
+2023
+
+Research engineer in the Ethics.AI project. Responsibilities include:
+
+* Implementation of an [open-source simulator of ethical Smart Grid](https://github.com/ethicsai/ethical-smart-grid).
+* Publishing scientific articles; participating to seminaries.
+* Reporting on the project’s results; developing a [website](https://projet.liris.cnrs.fr/ethicsai/).
+
+`r .create_tags(c("Python3", "Reinforcement Learning", "Ethical Artificial Intelligence", "Multi-Agent System"))`
+
+
+### Ph.D. student
+
+[LIRIS](https://liris.cnrs.fr/en)
+
+Lyon, France
+
+2022 - 2019
+
+Ph.D. student in the Ethics.AI project. Responsibilities include:
+
+* Organizing project meetings; preparing the agenda, taking the minutes.
+* Reviewing the state of the art on Machine Ethics; positioning our approach.
+* Developing the use-case and implementation of our approach.
+* Publishing scientific articles; communicating in conferences and seminaries.
+* Mentoring 5x research interns (Master 2) and 1x project (Master 1).
+* Teaching courses at the University, at Bachelor and Master level.
+
+`r .create_tags(c("Python3", "Reinforcement Learning", "Machine Ethics", "Multi-Agent System","Neural-Symbolic Learning", "Explainable AI"))`
+
+
+### Research internship
+
+[LIRIS](https://liris.cnrs.fr/)
+
+Lyon, France
+
+2019
+
+Research internship in a lab. Responsibilities include:
+
+* Reviewing state of the art; proposing solutions.
+* Implementing proof-of-concepts learning algorithms.
+
+`r .create_tags(c("Python3", "Reinforcement Learning", "Machine Ethics", "Multi-Agent System"))`
+
+
+### Research project
+
+[LIRIS](https://liris.cnrs.fr/)
+
+Lyon, France
+
+2018
+
+6-months research project as part of the curriculum (Master's orientation project - *POM*). Title: *Multi-label categorization for large web-based raw biography texts*, under the supervision of Dr. Frédéric Armetta and Dr. Marc Bertin. Responsibilities include:
+
+* Improving an existing algorithm for multi-label classification of documents.
+* Running experiments to validate the algorithm performances, and compare to baselines.
+* Reviewing the SOTA and writing a scientific article.
+
+`r .create_tags(c("Natural Language Processing", "Memory Networks", "Deep Learning", "Multi-label classification", "Imbalanced datasets"))`
 
 ## Education {data-icon=graduation-cap data-concise=true}
 
