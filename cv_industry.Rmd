@@ -97,6 +97,10 @@ htmltools::tagList(
 
 <p> `r simple_icons("postgresql")` PostgreSQL / `r simple_icons("mongodb")` MongoDB </p>
 
+:::{.recent-version}
+See the latest version on [rchaput.github.io/cv/industry/cv.pdf](https://rchaput.github.io/cv/industry/cv.pdf)
+:::
+
 
 # Main
 
