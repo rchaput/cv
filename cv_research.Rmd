@@ -108,6 +108,19 @@ read_data("data/research/publications_en.yml") %>%
 
 ## Teaching {data-icon=chalkboard-teacher}
 
+### AI and Deep Learning
+
+N/A
+
+CPE Lyon
+
+2024
+
+* Lectures (*CM*, 8h) + Practical works (*TP*, 12h)
+* Co-responsible for this module
+* Level 3rd year of engineering cycle (Bac+5)
+* Introduction to AI, Machine Learning, well-known algorithms and techniques
+
 ### Ethics of engineer
 
 N/A
@@ -217,6 +230,21 @@ N/A
 
 
 ## Professional Experience {data-icon=suitcase}
+
+### Associate Professor
+
+[CPE Lyon](https://www.cpe.fr/)
+
+Lyon, France
+
+Now - 2024
+
+Teacher at the CPE engineering school. Responsibilities include:
+
+* Organizing courses, handling external teachers.
+* Preparing courses' syllabus.
+* Preparing and supervising lectures, practical works (mainly in 4Y and 5Y courses).
+* Research on AI and Ethics-related subjects.
 
 ### Post-doctorate researcher
 

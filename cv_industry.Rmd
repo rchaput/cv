@@ -113,6 +113,21 @@ R, Prolog, JS.
 
 ## Professional Experience {data-icon=suitcase}
 
+### Associate Professor
+
+[CPE Lyon](https://www.cpe.fr/)
+
+Lyon, France
+
+Now - 2024
+
+Teacher at the CPE engineering school. Responsibilities include:
+
+* Organizing courses, handling external teachers.
+* Preparing courses' syllabus, lectures, and practical works.
+* Supervising and grading students' internships.
+* Research on AI and Ethics-related subjects.
+
 ### Post-doctorate researcher
 
 [LIRIS](https://liris.cnrs.fr/en)
@@ -146,7 +161,7 @@ Research engineer in the Ethics.AI project. Responsibilities include:
 * Publishing scientific articles; participating to seminaries.
 * Reporting on the project’s results; developing a website.
 
-`r .create_tags(c("Python3", "Reinforcement Learning", "Ethical Artificial Intelligence", "Multi-Agent System"))`
+`r .create_tags(c("Python3", "RL", "Ethical Artificial Intelligence", "MAS"))`
 
 
 ### Ph.D. student
@@ -157,18 +172,16 @@ Lyon, France
 
 2022 - 2019
 
-Ph.D. student in the Ethics.AI project. The thesis subject was: *Learning
-behaviours aligned with moral values in a multi-agent system: guiding
-reinforcement learning with symbolic judgments*. Responsibilities include:
+Ph.D. student in the Ethics.AI project. Responsibilities include:
 
 * Organizing project meetings; preparing the agenda, taking the minutes.
 * Reviewing the state of the art on Machine Ethics; positioning our approach.
 * Developing the use-case and implementation of our approach.
-* Publishing scientific articles; communicating in conferences and seminaries.
-* Mentoring 5x research interns (Master 2) and 1x engineer project (Master 1).
-* Teaching courses at the University, at Licence and Master level.
+* Publishing scientific articles; communicating in conferences.
+* Mentoring 5x research interns (Master 2) and 1x intern (Master 1).
+* Teaching courses at the University, at Licence and Master levels.
 
-`r .create_tags(c("Python3", "Reinforcement Learning", "Ethical Artificial Intelligence", "Multi-Agent System","Neural-Symbolic Learning", "Explainable AI"))`
+`r .create_tags(c("Python3", "RL", "Ethical Artificial Intelligence", "MAS","Neural-Symbolic Learning", "xAI"))`
 
 
 ### Research internship
@@ -184,7 +197,7 @@ Research internship in a lab. Responsibilities include:
 * Reviewing state of the art; proposing solutions.
 * Implementing proof-of-concepts learning algorithms.
 
-`r .create_tags(c("Python3", "Reinforcement Learning", "Ethical Artificial Intelligence", "Multi-Agent System"))`
+`r .create_tags(c("Python3", "RL", "Ethical Artificial Intelligence", "MAS"))`
 
 
 ### Internship
