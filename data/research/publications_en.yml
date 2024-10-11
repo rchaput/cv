@@ -1,12 +1,20 @@
-- title: "Learning to identify and settle dilemmas through contextual user preferences"
-  kind: "International Conference"
-  where: "ICTAI'23"
-  date: "2023"
+- title: "Multi-objective reinforcement learning: an ethical perspective"
+  kind: "International Workshop"
+  where: "MODeM, ECAI'24"
+  date: "2024"
   ref:
-    "Rémy Chaput, Laëtitia Matignon, Mathieu Guillermin. Learning to identify
-    and settle dilemmas through contextual user preferences. IEEE International
-    Conference on Tools with Artificial Intelligence (ICTAI), Nov 2023, Atlanta,
-    United States. DOI : 10.1109/ICTAI59109.2023.00075. HAL : hal-04349804."
+    "Timon Deschamps, Rémy Chaput, Laëtitia Matignon. Multi-objective reinforcement
+    learning: an ethical perspective. Multi-Objective Decision Making Workshop,
+    ECAI, Oct 2024, Santiago de Compostela, Spain. HAL : hal-04711682"
+
+- title: "Multi-objective reinforcement learning: an ethical perspective"
+  kind: "National Conference"
+  where: "RJCIA'24"
+  date: "2024"
+  ref:
+    "Timon Deschamps, Rémy Chaput, Laetitia Matignon. Multi-objective reinforcement
+    learning: an ethical perspective. RJCIA, Jul 2024, La Rochelle, France.
+    HAL : hal-04711663"
 
 - title: "Adaptive reinforcement learning of multi-agent ethically-aligned behaviours: the QSOM and QDSOM algorithms"
   kind: "Technical Report"
@@ -16,6 +24,16 @@
     "Rémy Chaput, Olivier Boissier, Mathieu Guillermin. Adaptive reinforcement
     learning of multi-agent ethically-aligned behaviours: the QSOM and QDSOM 
     algorithms. 2023. HAL : hal-04379426"
+
+- title: "Learning to identify and settle dilemmas through contextual user preferences"
+  kind: "International Conference"
+  where: "ICTAI'23"
+  date: "2023"
+  ref:
+    "Rémy Chaput, Laëtitia Matignon, Mathieu Guillermin. Learning to identify
+    and settle dilemmas through contextual user preferences. IEEE International
+    Conference on Tools with Artificial Intelligence (ICTAI), Nov 2023, Atlanta,
+    United States. DOI : 10.1109/ICTAI59109.2023.00075. HAL : hal-04349804."
 
 - title: "Ethical Smart Grid: a Gym environment for learning ethical behaviours"
   kind: "Journal Article"
