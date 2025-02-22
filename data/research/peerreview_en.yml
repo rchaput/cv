@@ -4,6 +4,12 @@
   date: "2024"
   details: "Domains: Reinforcement Learning, Robotics, Multi-Agent Systems"
 
+- name: "ECAI'23"
+  role: "Peer-reviewed 2 articles for the ECAI'2023 conference"
+  url: "https://ecai2023.eu/"
+  date: "2023"
+  details: "Domains: Reinforcement Learning, Large Language Models"
+
 - name: "AAMAS'23"
   role: "Peer-reviewed 1 article for the AAMAS'2023 conference as a sub-reviewer"
   url: "https://aamas2023.soton.ac.uk/"
